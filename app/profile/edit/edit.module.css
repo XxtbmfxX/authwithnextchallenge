@@ -1,0 +1,19 @@
+.Form {
+  @apply grid gap-2;
+}
+
+.Form input {
+  @apply border-2 border-gray-200 rounded-lg p-2 w-64;
+}
+
+.Form div {
+  @apply text-red-400 text-center mb-4;
+}
+
+.Form button {
+  @apply bg-blue-500 active:bg-blue-600 p-2 rounded-lg w-28 text-white;
+}
+
+.Form label {
+  @apply mt-2;
+}
