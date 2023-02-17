@@ -4,8 +4,8 @@ import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import Image from "next/image";
 
 export default async function Home() {
-  // const session = await getServerSession(authOptions);
-  // console.log(session);
+  const session = await getServerSession(authOptions);
+  console.log(session);
 
   return (
     <div className="grid gap-8 place-content-center px-4 h-3/4 ">
