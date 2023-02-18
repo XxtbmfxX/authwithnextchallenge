@@ -35,7 +35,7 @@ export default function EditForm({ userState }) {
 
   return (
     <>
-      <ImageUpload Uimage={userState.image} id={userState.id} />
+      <ImageUpload id={userState.id} />
       <form className={styles.Form} onSubmit={formik.handleSubmit}>
         <label htmlFor="name">Name</label>
         <input id="name" type="text" {...formik.getFieldProps("name")} />
@@ -62,6 +62,9 @@ export default function EditForm({ userState }) {
 
         <button type="submit">Submit</button>
       </form>
+      <small className="mt-20">
+        you migth need to reload the page to see the changes{" "}
+      </small>
     </>
   );
 }

@@ -3,24 +3,26 @@ import prisma from "../../prisma/client";
 export default async function handler(req, res) {
   try {
     switch (req.method) {
-      case "GET":
-        const email = req.body.email;
+      case "POST":
+        const { image, id } = req.body;
+        console.log(image);
         const result = await prisma.user.findUnique({
           where: {
-            email: email,
+            id: id,
           },
         });
-        return res.status(200).json(result);
-      case "POST":
-        const { name, bio, phone, id } = req.body;
+
+        if (result.image === image) {
+          return res.status(204).json(postRes);
+        }
         const postRes = await prisma.user.update({
           where: { id: id },
           data: {
-            name: name,
-            bio: bio,
-            phone: phone,
+            image: image,
+            photo: image,
           },
         });
+        console.log(postRes);
         return res.status(204).json(postRes);
 
       default:

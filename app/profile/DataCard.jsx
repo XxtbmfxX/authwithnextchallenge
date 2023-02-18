@@ -3,7 +3,7 @@ import axios from "axios";
 import { getServerSession } from "next-auth";
 import prisma from "../../prisma/client";
 
-export const revalidate = 3600;
+export const revalidate = 10;
 async function getUser(email) {
   const result = await prisma.user.findUnique({
     where: {

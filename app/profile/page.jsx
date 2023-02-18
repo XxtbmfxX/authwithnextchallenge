@@ -1,6 +1,6 @@
 import { getServerSession } from "next-auth";
 import Link from "next/link";
-import EditForm from "./EditForm.jsx";
+import EditForm from "./edit/EditForm.jsx";
 import { authOptions } from "@/pages/api/auth/[...nextauth]";
 import prisma from "@/prisma/client";
 
@@ -26,8 +26,8 @@ export default async function page() {
         <span class="material-symbols-outlined">arrow_back</span>
         <span class="">Back</span>
       </Link>
-      <div className=" w-full md:border-2 md:border-gray-300 rounded-lg  p-4 max-w-3xl">
-        <h1 className="text-3xl">Change Info</h1>
+      <div className=" mb-8 w-full md:border-2 md:border-gray-300 rounded-lg  p-4 max-w-3xl">
+        <h1 className="text-3xl ">Change Info</h1>
         <p>Changes will be reflected to every services</p>
       </div>
       <EditForm userState={userState} />
