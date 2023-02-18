@@ -4,15 +4,25 @@ export default async function handler(req, res) {
   try {
     switch (req.method) {
       case "GET":
-        const data = await prisma.user.findMany();
-        return res.status(200).json(data);
-      case "POST":
-        const postRes = await prisma.user.create({
-          data: {
-            ...req.body,
+        const email = req.body.email;
+        const result = await prisma.user.findUnique({
+          where: {
+            email: email,
           },
         });
-        return res.status(200).json(postRes);
+        return res.status(200).json(result);
+      case "POST":
+        const { name, bio, image, phone, id } = req.body;
+        const postRes = await prisma.user.update({
+          where: { id: id },
+          data: {
+            name: name,
+            bio: bio,
+            image: image,
+            phone: phone,
+          },
+        });
+        return res.status(204).json(postRes);
 
       default:
         break;

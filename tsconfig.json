@@ -24,6 +24,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prisma/client.js", "app/page.jsx", "app/page.jsx", "app/layout.jsx", "app/profile/layout.jsx", "app/profile/layout.jsx", "app/profile/edit/EditForm.jsx", "app/profile/edit/EditForm.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "prisma/client.js", "app/page.jsx", "app/page.jsx", "app/layout.jsx", "app/profile/layout.jsx", "app/profile/layout.jsx", "app/profile/edit/EditForm.jsx", "app/profile/edit/EditForm.jsx", "app/profile/page.jsx", "app/profile/DataCard.jsx", "app/profile/DataCard.jsx", "app/profile/edit/ImageUpload.tsx", "app/profile/edit/ImageUpload.tsx"],
   "exclude": ["node_modules"]
 }

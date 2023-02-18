@@ -5,9 +5,9 @@ const nextConfig = {
   },
   images: {
     domains: [
-      "lh3.googleusercontent.com ",
-      "avatars.githubusercontent.com",
       "https://xsgames.co/randomusers/avatar.php?g=pixel",
+      "lh3.googleusercontent.com",
+      "avatars.githubusercontent.com",
     ],
   },
 };
