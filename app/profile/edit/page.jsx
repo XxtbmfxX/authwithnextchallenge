@@ -22,7 +22,7 @@ export default async function page() {
     <div className=" grid content-center place-items-center w-full max-w-3xl p-2">
       <Link
         className=" my-8  active:animate-ping place-self-start flex items-center text-blue-400"
-        href={"/profile"}>
+        href={"/"}>
         <span class="material-symbols-outlined">arrow_back</span>
         <span class="">Back</span>
       </Link>

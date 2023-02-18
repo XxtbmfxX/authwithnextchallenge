@@ -12,7 +12,7 @@ export default function EditButton() {
 
       <Link
         className="border-2 border-gray-200 py-4 px-6 rounded-lg "
-        href={"/profile/edit"}>
+        href={"/"}>
         Edit
       </Link>
     </div>

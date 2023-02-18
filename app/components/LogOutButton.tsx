@@ -8,10 +8,10 @@ export default function LogOutButton() {
 
   return (
     <li
-      className=" flex items-center hover:bg-gray-100 cursor-pointer mt-1 p-4 text-red-500 rounded-lg"
+      className=" flex items-center hover:bg-gray-300 cursor-pointer mt-1 p-4 text-red-500 rounded-lg"
       onClick={() => {
-        router.push("/");
         signOut();
+        router.push("/");
       }}>
       <span className="material-symbols-outlined mr-2 ">logout</span>
       LogOut

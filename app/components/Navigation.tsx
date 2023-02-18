@@ -18,7 +18,7 @@ export default function Navigation({ image }: { image: string }) {
         height={36}
       />
       <nav
-        className={`absolute right-4 top-24 bg-white ${
+        className={`  rounded-lg  absolute right-4 top-24  ${
           show ? "flex" : "hidden"
         }  `}>
         <ul className={styles.NavCard}>

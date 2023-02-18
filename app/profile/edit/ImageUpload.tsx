@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent } from "react";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 
@@ -51,7 +51,6 @@ export default function ImageUpload({
       <label className="cursor-pointer w-full flex items-center justify-between">
         <span className={(uploadedImage && "hidden") || ""}>
           Seleccionar <br /> imagen
-          {uploadedImage ? "subida" : " no subida"}
         </span>
 
         <input className="hidden" type="file" onChange={handleImageChange} />

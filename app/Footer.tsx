@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="mt-32 flex justify-between px-4">
+    <footer className=" pb-4 px-4 mt-4 flex justify-between ">
       <span className="text-gray-500  ">
         <a
           className="hover:text-blue-400"

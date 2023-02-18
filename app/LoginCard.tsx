@@ -1,25 +1,14 @@
 "use client";
-import Image from "next/image";
+import LogoStatus from "./components/LogoStatus";
 import LoginButton from "./LoginButton";
-import { useRouter } from "next/navigation";
+import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export default function LoginCard({ session }: { session: { user: object } }) {
-  const router = useRouter();
-  console.log(session);
-
-  if (session.user) {
-    router.push("/profile");
-  }
-
   return (
-    <div className="grid mt-8 max-w-md sm:border-2 rounded-lg mx-auto gap-8 place-content-center px-4 h-3/4 ">
-      <Image
-        src={"/devchallenges.svg"}
-        className="h-auto"
-        alt="logo"
-        width={200}
-        height={200}
-      />
+    <div className="grid h-3/4 my-12 max-w-md sm:border-2 rounded-lg mx-auto gap-10 place-content-center px-4 ">
+      <LogoStatus />
+
       <h1 className="text-2xl  ">
         Join thousands of learners from around the world{" "}
       </h1>
